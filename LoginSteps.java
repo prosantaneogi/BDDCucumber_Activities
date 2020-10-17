@@ -6,13 +6,14 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import commonpackage.commonmethod;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import junit.framework.Assert;
 
-public class LoginSteps {
+public class LoginSteps extends commonmethod {
 	WebDriver driver;
 	WebDriverWait wait;
 
@@ -78,9 +79,5 @@ public class LoginSteps {
         }
 	}
 
-	@And("^Close the Browser$")
-	public void closeBrowser() {
-		//Close browser
-		driver.close();
-	}
+
 }
